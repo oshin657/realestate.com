@@ -1,0 +1,1140 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header {
+    background-color: #06122A; 
+    padding: 10px 20px; /* Adjusted padding for breathing space */
+    color: white; /* Default text color */
+}
+
+/* Header Flex Container */
+#header-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: center; /* Center-align content vertically */
+    width: 100%; /* Make the section full width */
+    padding: 0 20px; /* Add some horizontal spacing */
+}
+
+
+/* Top Section Items */
+.top {
+    display: flex;
+    flex: 1; /* Allow each child to grow equally */
+    align-items: center;
+    gap: 10px; /* Spacing between icon and text */
+    padding: 5px 15px; /* Add some inner spacing */
+}
+
+
+.top i {
+    color: #5EA51E; /* Eye-catching green for icons */
+    font-size: 20px; /* Increase icon size */
+}
+
+.top span.highlight {
+    font-weight: bold; /* Highlighted text for key information */
+    color: #5EA51E; /* Green color to draw attention */
+}
+
+.top span.subtext {
+    display: block; /* Ensure it moves to the next line */
+    font-size: 12px; /* Smaller, secondary text */
+    color: #aaa; /* Subtle gray color */
+}
+
+
+
+/* Social Media Section */
+#media {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Horizontal layout */
+    gap: 10px; /* Space between items */
+    padding: 0;
+    margin: 5px 0 0 0; /* Reduce extra spacing */
+}
+
+#media a {
+    text-decoration: none; /* Remove underline */
+    font-size: 12px; /* Slightly smaller font for social links */
+    color: #ccc; /* Subtle gray */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+#media a:hover {
+    color: #5EA51E; /* Green color on hover */
+}
+
+
+
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #012644; 
+    color: #fff;
+}
+
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #5EA51E;
+}
+
+
+ .nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin: 0 15px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #5EA51E;
+}
+
+
+.cta-button .btn {
+    padding: 10px 20px;
+    background-color: #5EA51E;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button .btn:hover {
+    background-color: #4e8f1a;
+}
+
+@media (max-width: 768px) {
+    /* Header Styles */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #012644;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    /* Logo */
+    .logo a {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #5EA51E;
+        text-decoration: none;
+    }
+
+    /* Hamburger Icon */
+    .hamburger {
+        font-size: 30px;
+        color: #fff;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* Navigation Menu (hidden by default) */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #1d3e5e;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 8px 0 0 8px;
+        z-index: 999;
+    }
+
+    /* Menu Items */
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        list-style: none;
+        margin: 0;
+    }
+
+    .nav-menu ul li {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .nav-menu ul li a {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        padding: 15px;
+        text-align: center;
+        background-color: transparent;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #5EA51E;
+        color: #fff;
+    }
+
+    /* Submit Button */
+    .cta-button {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .cta-button .btn {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        background-color: #5EA51E;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button .btn:hover {
+        background-color: #4e8f1a;
+    }
+
+    /* Overlay background when menu is active */
+    .nav-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 998;
+    }
+
+    .nav-menu-overlay.active {
+        display: block;
+    }
+
+    /* Active state for the menu when clicked */
+    .nav-menu.active {
+        right: 0;
+        transform: translateX(0);
+    }
+
+    .hero-section {
+        height: 70vh; /* Adjust height to fit the screen better */
+        background-position: center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Hero Content Styling */
+    .hero-content {
+        background-color: rgba(0, 0, 0, 0.7); /* Darker overlay for better text contrast */
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Hero Heading */
+    .hero-content h1 {
+        font-size: 32px; /* Slightly smaller font for mobile */
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    /* Hero Paragraph */
+    .hero-content p {
+        font-size: 16px; /* Adjust for readability */
+        margin-bottom: 20px;
+    }
+
+    /* Hero Button Styling */
+    .hero-btn {
+        background-color: #4CAF50;
+        padding: 12px 25px;
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for main button */
+    .hero-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Property Buttons Container */
+    .property-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* Property Button Styling */
+    .property-btn {
+        background-color: #1D72B8;
+        padding: 12px 30px;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        margin: 8px 0;
+        width: 100%;
+        border-radius: 25px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for property buttons */
+    .property-btn:hover {
+        background-color: #155a8a;
+    }
+
+    
+    
+}
+
+
+
+
+.hero-section {
+    background-image: url('CF90E081-84F1-4860-8BD0-3DB0FC3613E8.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background-color: #4CAF50;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.property-buttons {
+    margin-top: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001a33;
+}
+
+.property-btn {
+    background-color: #1D72B8;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-section{
+    display: flex;
+    box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.57);
+    position: absolute;
+    top:760px;
+}
+
+.Keyword{
+    height: 100px;
+    width: 220px;
+    padding: 20px 35px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.search input{
+    width: 150px;
+}
+
+
+.search{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search i{
+    color: #E5E5E5;
+}
+
+input {
+    background-color:transparent;
+    border: 0px solid;
+    height:30px;
+    width:260px;
+}
+input:focus {
+    outline:none;
+}
+
+#search-button{
+    width: 250px;
+    cursor: pointer;
+    height: 100px;
+    font-size: larger;
+    font-weight: bolder;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    text-transform: uppercase;
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    border-radius: 0;
+    padding-top: 40px;
+}
+
+#search-button:hover {
+    font-size: 18px;
+    background-color: #45a049; /* Slightly darker shade */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a soft shadow on hover */
+    transform: scale(1.05); /* Slightly increases the size */
+    transition: all 0.3s ease-in-out;
+}
+
+.real-estate-categories {
+    width: 100%;
+    margin-top: 120px;
+    background-color: #f4f7fa;
+    padding: 50px 0;
+}
+
+.category-title {
+    text-align: center;
+    color: #2f4f4f;
+    font-size: 2rem;
+    font-family: 'Arial', Helvetica, sans-serif;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+#explore {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    /* flex-wrap: wrap; */ /* Remove flex-wrap to keep in one line */
+    padding: 0 20px;
+}
+
+.icon {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 20%; /* Adjust the width as needed */
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(100px); /* Positioned below the viewport */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.icon.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide the element back into view */
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* Start below the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at its natural position */
+    }
+}
+
+.icon.visible {
+    animation: slideInUp 0.6s ease-out forwards; /* Apply the animation */
+}
+
+
+.icon i {
+    font-size: 60px;
+    color: #5ea51e;
+    margin-bottom: 15px;
+}
+
+.icon p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.icon:hover {
+    background-color: #5ea51e;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.icon:hover i {
+    color: #fff;
+}
+
+.real-estate-categories {
+    width: 100%;
+    margin-top: 120px;
+    background-color: #f4f7fa;
+    padding: 50px 0;
+}
+
+.category-title {
+    text-align: center;
+    color: #2f4f4f;
+    font-size: 2rem;
+    font-family: 'Arial', Helvetica, sans-serif;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+
+.category-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.category {
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 20%; /* Adjust the width as needed */
+    cursor: pointer;
+}
+
+.category i {
+    font-size: 40px;
+    color: #5ea51e;
+    margin-bottom: 15px;
+}
+
+.category p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.category:hover {
+    background-color: #5ea51e;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+.category:hover i {
+    color: #fff;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+.place-list {
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation settings */
+}
+
+/* Make place-list visible and slide in when scrolled into view */
+.place-list.visible {
+    opacity: 1;
+    transform: translateY(0); /* Slide to original position */
+}
+
+/* Hover Effect for Number */
+.number p:hover {
+    background-color: #5ea51e;
+    transition: 0.2s ease-in;
+    color: #fff;
+}
+
+.number p {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #F7F7F7;
+    color: #5ea51e;
+    cursor: pointer;
+}
+
+/* Optional: Adding smooth animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Starts below the viewport */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at normal position */
+    }
+}
+
+
+/* Styling for the section and title */
+.our h4 {
+    font-size: 1rem;
+    color: #4CAF50;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.our {
+    text-align: center;
+}
+
+.our h2 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* General styling for property cards container */
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual property card styling */
+.property {
+    width: 48%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    background: linear-gradient(145deg, #f2f2f2, #ffffff);
+    margin-bottom: 20px;
+}
+
+/* Image styling with hover effect */
+.property img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Add gradient overlay effect */
+.property::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Hover effect: Darken image and show overlay */
+.property:hover::before {
+    opacity: 1;
+}
+
+/* Image zoom effect on hover */
+.property:hover img {
+    transform: scale(1.1);
+}
+
+/* Details section inside each property card */
+.details {
+    padding: 20px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%); /* Initially hidden */
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* Price styling */
+.details p:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* Sale/Rent badge styling */
+.details p:nth-last-child(2) {
+    font-size: 1rem;
+    color: #fff;
+    background: #FF5722;
+    padding: 8px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* Property title styling */
+.details h4 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Rest of the property details styling */
+.details p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: white;
+    opacity: 0.9;
+}
+
+/* Hover effect to reveal details */
+.property:hover .details {
+    transform: translateY(0); /* Slide into view */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Add smooth transition to the entire property card */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.property {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Styling for buttons (if any) */
+.property .view-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #FF9800;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.property .view-more:hover {
+    background: #FF5722;
+}
+
+
+
+
+
+
+/* .counter-section {
+    background: #599A25;
+    background-image: url(B6E0D1A6-4453-4BA6-943A-7ED4D160B067.jpeg);
+    background-attachment: fixed;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+} */
+
+/* Initial state for the entire counter section */
+.counter-section {
+    background-image: url('B6E0D1A6-4453-4BA6-943A-7ED4D160B067.jpeg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Slide down effect */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Keyframe for fading and sliding up the section */
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add class to trigger animation */
+.counter-section.visible {
+    animation: fadeInSection 1s ease-out forwards;
+}
+
+/* Individual counter items animation */
+.counter-item {
+    background: rgba(9, 9, 9, 0.531);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.8); /* Initially scaled down */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add animation for each counter item */
+.counter-item.visible {
+    opacity: 1;
+    transform: scale(1); /* Scale to normal size */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.counter-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.counter-label {
+    font-size: 18px;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.testimonial-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 1200px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-item {
+    flex: 0 0 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 0 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    color: #888;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007bff;
+}
+
+.dot:hover {
+    background-color: #0056b3;
+}
+
+.testimonial-item img{
+    object-fit: cover;
+}
+
+.best{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color: #55961E;
+    color: #fff;
+    padding-top: 30px;
+}
+
+
+
+.best button{
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+}
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 80px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-left img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-left p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #b0b0b0;
+}
+
+.footer-right {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+.footer-column h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+    padding-left: 0;
+}
+
+.footer-column h5::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    
+    left: 0;
+    bottom: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #b0b0b0;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-bottom i {
+    color: #e74c3c;
+}
+
+/* Add font awesome icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
